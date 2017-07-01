@@ -1,6 +1,18 @@
-var number = 600851475143;
-for (var i = 2; i < Math.floor(number/2); i++) {
-	if (number % i === 0) {
-		console.log(i);
-	}
+function getPrimeNumber(number)
+{
+    var factor = 2;
+    while(number != factor)
+    {
+        if(number % factor === 0)
+        {
+            number = number / factor;
+        }
+        else
+        {
+            factor++;
+        }
+    }
+    return factor;
 }
+
+getPrimeNumber(600851475143);
